@@ -1,0 +1,26 @@
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Función que de un string, regrese la longitud de la última palabra. ")
+print("Las palabras tienen separación por uno o más espacios. ")
+print(" ")
+
+
+def longitud_ultima_palabra(s):
+    # Eliminamos los espacios al inicio y al final del string
+    s = s.strip()
+    
+    # Esto maneja múltiples espacios automáticamente
+    palabras = s.split()
+    
+    # Si hay palabras, devolvemos la longitud de la última
+    # De lo contrario, devolvemos 0
+    return len(palabras[-1]) if palabras else 0
+
+# Ejemplo de uso
+texto = "   Hola,    mundo   "
+# Llama a la función y muestra la longitud de la última palabra
+print(input("INTRODUCE UN TEXTO POR FAVOR"))
+
+print(longitud_ultima_palabra(texto))  
