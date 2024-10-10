@@ -1,0 +1,38 @@
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Escribir una funcion sum() y una función multip() que sumen y multipliquen respectivamente")
+print("todos los números de una lista. Por ejemplo: sum([1,2,3,4]) debería devolver 10 y multip([1,2,3,4])")
+print("multip([1,2,3,4]) debería devolver 24.")
+print(" ")
+
+
+def sum(numeros):
+    # Inicializamos la suma en 0
+    total = 0
+    # Iteramos sobre cada número en la lista y lo sumamos
+    for num in numeros:
+        total += num
+    # Devolvemos la suma total
+    return total
+
+def multip(numeros):
+    # Inicializamos el producto en 1
+    producto = 1
+    # Verificamos si la lista está vacía para evitar multiplicaciones innecesarias
+    if not numeros:
+        return 0  # Retornamos 0 si la lista está vacía
+    # Iteramos sobre cada número en la lista y lo multiplicamos
+    for num in numeros:
+        producto *= num
+    # Devolvemos el producto total
+    return producto
+
+# Ejemplos de uso
+suma_resultado = sum([1, 2, 3, 4])
+multip_resultado = multip([1, 2, 3, 4])
+
+# Muestra los resultados
+print(suma_resultado)  
+print(multip_resultado) 
