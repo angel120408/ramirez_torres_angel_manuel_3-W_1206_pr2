@@ -1,0 +1,35 @@
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print(" Que saque la distancia dirigida entre dos puntos")
+print(" ")
+
+
+class Punto:
+    def __init__(self, x, y):
+        # Inicializa las coordenadas del punto
+        self.x = x
+        self.y = y
+
+    def distancia_dirigida(self, otro):
+        # Calcula la distancia dirigida hacia otro punto
+        return (otro.x - self.x, otro.y - self.y)
+
+# Función para obtener un punto a partir de la entrada del usuario
+def obtener_punto():
+    x = float(input("Ingresa la coordenada x: "))  # Solicita la coordenada x
+    y = float(input("Ingresa la coordenada y: "))  # Solicita la coordenada y
+    return Punto(x, y)  # Retorna un nuevo objeto Punto
+
+# Ejemplo de uso
+print("Ingrese las coordenadas del primer punto:")
+punto1 = obtener_punto()  # Obtiene el primer punto del usuario
+print("Ingrese las coordenadas del segundo punto:")
+punto2 = obtener_punto()  # Obtiene el segundo punto del usuario
+
+# Calculamos la distancia dirigida entre los dos puntos
+resultado = punto1.distancia_dirigida(punto2)
+
+# Muestra el resultado
+print(f"La distancia dirigida entre los puntos es: {resultado}")  # Muestra el vector de distancia
