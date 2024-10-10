@@ -249,32 +249,224 @@ else:
 
 
 # Codigo 7 De la Practica Numero 2 Creado Por Ramirez Torres Angel Manuel De 3°W NO.De Control: 1206
--
+- Función que de un string, regrese la longitud de la última palabra. Las palabras tienen separación por uno o más espacios.
 
 
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Función que de un string, regrese la longitud de la última palabra. ")
+print("Las palabras tienen separación por uno o más espacios. ")
+print(" ")
+
+
+def longitud_ultima_palabra(s):
+    # Eliminamos los espacios al inicio y al final del string
+    s = s.strip()
+    
+    # Esto maneja múltiples espacios automáticamente
+    palabras = s.split()
+    
+    # Si hay palabras, devolvemos la longitud de la última
+    # De lo contrario, devolvemos 0
+    return len(palabras[-1]) if palabras else 0
+
+# Ejemplo de uso
+texto = "   Hola,    mundo   "
+# Llama a la función y muestra la longitud de la última palabra
+print(input("INTRODUCE UN TEXTO POR FAVOR"))
+
+print(longitud_ultima_palabra(texto))  
+
+![image](https://github.com/user-attachments/assets/6611806b-9572-4eac-8da6-ca364bda49b2)
+![image](https://github.com/user-attachments/assets/2a185bea-84ef-42c4-aa33-d087ffc96d11)
+![image](https://github.com/user-attachments/assets/4f1d82d2-b560-4525-bc5a-f6e78394248f)
 
 
 
 # Codigo 8 De la Practica Numero 2 Creado Por Ramirez Torres Angel Manuel De 3°W NO.De Control: 1206
--
+- Definir una función (), que tome tres números como argumentos y devuelva el
+mayor de ellos.
+
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Definir una función (), que tome tres números como argumentos")
+print("y devuelva el mayor de ellos.")
+print(" ")
 
 
+def mayor_de_tres(a, b, c):
+    # Creamos una lista con los tres números
+    numeros = [a, b, c]
+    print(input("Ingresa un numero"))
+    print(input("Ingresa un segundo numero"))
+    print(input("Ingresa un tercer numero"))
+    
+    # Inicializamos una variable para almacenar el mayor
+    mayor = numeros[0]
+    
+    # Recorremos la lista de números
+    for num in numeros:
+        # Si encontramos un número mayor, lo actualizamos
+        if num > mayor:
+            mayor = num
+    
+    # Devolvemos el mayor de los tres números
+    return mayor
+print(" ")
+# Ejemplo de uso
+resultado = mayor_de_tres(10, 25, 15)
+# Muestra el mayor de los tres números
+print("El numero mayor es")
+print(resultado) 
+
+
+![image](https://github.com/user-attachments/assets/9a58c1e1-2aec-4b74-afbf-cb9407981c14)
+![image](https://github.com/user-attachments/assets/b3806b7f-802b-439f-8411-272b0022de90)
+![image](https://github.com/user-attachments/assets/ea12ead5-6893-437f-8218-f2fc59e119d2)
 
 
 
 
 # Codigo 9 De la Practica Numero 2 Creado Por Ramirez Torres Angel Manuel De 3°W NO.De Control: 1206
--
+- Escribir una funcion sum() y una función multip() que sumen y multipliquen respectivamente
+todos los números de una lista. Por ejemplo: sum([1,2,3,4]) debería devolver 10 y multip([1,2,3,4])
+debería devolver 24.
+
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Escribir una funcion sum() y una función multip() que sumen y multipliquen respectivamente")
+print("todos los números de una lista. Por ejemplo: sum([1,2,3,4]) debería devolver 10 y multip([1,2,3,4])")
+print("multip([1,2,3,4]) debería devolver 24.")
+print(" ")
 
 
+def sum(numeros):
+    # Inicializamos la suma en 0
+    total = 0
+    # Iteramos sobre cada número en la lista y lo sumamos
+    for num in numeros:
+        total += num
+    # Devolvemos la suma total
+    return total
+
+def multip(numeros):
+    # Inicializamos el producto en 1
+    producto = 1
+    # Verificamos si la lista está vacía para evitar multiplicaciones innecesarias
+    if not numeros:
+        return 0  # Retornamos 0 si la lista está vacía
+    # Iteramos sobre cada número en la lista y lo multiplicamos
+    for num in numeros:
+        producto *= num
+    # Devolvemos el producto total
+    return producto
+
+# Ejemplos de uso
+suma_resultado = sum([1, 2, 3, 4])
+multip_resultado = multip([1, 2, 3, 4])
+
+# Muestra los resultados
+print(suma_resultado)  
+print(multip_resultado) 
+
+
+
+![image](https://github.com/user-attachments/assets/431f766c-c7d1-4408-8663-f2b5e1832b77)
+![image](https://github.com/user-attachments/assets/890f987d-c3e4-48b1-ab0d-5787eb4607ed)
+![image](https://github.com/user-attachments/assets/f27e9bf4-a29d-417f-b6ff-14b727687900)
 
 
 
 # Codigo 10 De la Practica Numero 2 Creado Por Ramirez Torres Angel Manuel De 3°W NO.De Control: 1206
--
+- Escribir una función que tome un carácter y devuelva True si es una vocal, de lo contrario
+devuelve False.
+
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Escribir una funcion sum() y una función multip() que sumen y multipliquen respectivamente")
+print("todos los números de una lista. Por ejemplo: sum([1,2,3,4]) debería devolver 10 y multip([1,2,3,4])")
+print("multip([1,2,3,4]) debería devolver 24.")
+print(" ")
+
+
+def es_vocal(caracter):
+    # Convertimos el carácter a minúscula para simplificar la comparación
+    caracter = caracter.lower()
+    
+    # Definimos las vocales en minúscula
+    vocales = "aeiou"
+    
+    # Verificamos si el carácter está en la cadena de vocales
+    return caracter in vocales
+
+# Ejemplos de uso
+print(es_vocal('a'))  # Salida: True
+print(es_vocal('B'))  # Salida: False
+print(es_vocal('E'))  # Salida: True
+print(es_vocal('o'))  # Salida: True
+print(es_vocal('x'))  # Salida: False
+
+
+![image](https://github.com/user-attachments/assets/76523b50-e6d7-4b80-a893-0351c699ef5b)
+![image](https://github.com/user-attachments/assets/a7a29954-db88-43b6-b5d5-f74637c56fa4)
+![image](https://github.com/user-attachments/assets/2a56c0f4-b7d1-49e9-89c8-751264a96fab)
+
 
 
 
 
 # Codigo 11 De la Practica Numero 2 Creado Por Ramirez Torres Angel Manuel De 3°W NO.De Control: 1206
--
+- Que saque la distancia dirigida entre dos puntos
+
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print(" Que saque la distancia dirigida entre dos puntos")
+print(" ")
+
+
+class Punto:
+    def __init__(self, x, y):
+        # Inicializa las coordenadas del punto
+        self.x = x
+        self.y = y
+
+    def distancia_dirigida(self, otro):
+        # Calcula la distancia dirigida hacia otro punto
+        return (otro.x - self.x, otro.y - self.y)
+
+# Función para obtener un punto a partir de la entrada del usuario
+def obtener_punto():
+    x = float(input("Ingresa la coordenada x: "))  # Solicita la coordenada x
+    y = float(input("Ingresa la coordenada y: "))  # Solicita la coordenada y
+    return Punto(x, y)  # Retorna un nuevo objeto Punto
+
+# Ejemplo de uso
+print("Ingrese las coordenadas del primer punto:")
+punto1 = obtener_punto()  # Obtiene el primer punto del usuario
+print("Ingrese las coordenadas del segundo punto:")
+punto2 = obtener_punto()  # Obtiene el segundo punto del usuario
+
+# Calculamos la distancia dirigida entre los dos puntos
+resultado = punto1.distancia_dirigida(punto2)
+
+# Muestra el resultado
+print(f"La distancia dirigida entre los puntos es: {resultado}")  # Muestra el vector de distancia
+
+
+
+![image](https://github.com/user-attachments/assets/db7e3b5d-f63a-4992-a60e-70bb5964698f)
+![image](https://github.com/user-attachments/assets/adab8e03-545a-42fb-a73c-4aded1a80ef3)
+![image](https://github.com/user-attachments/assets/9be73fd0-98ba-4937-ac88-83abedadc274)
+
+
+
