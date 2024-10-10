@@ -1,0 +1,61 @@
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Calcular el área de un círculo  y el volumen ")
+print("otra que calcule el volumen de un cilindro y utilice  primera función. ")
+print(" ")
+
+import math  # Importar la biblioteca matemática para usar constantes y funciones
+
+# Función para calcular el área de un círculo
+def calcular_area_circulo(radio):
+    #Calcula el área de un círculo dado su radio.
+
+    #param radio: Radio del círculo
+    #return: Área del círculo
+    
+    area = math.pi * (radio ** 2)  # Fórmula: π * r²
+    return area  # Retornar el área calculada
+
+# Función para calcular el volumen de una esfera
+def calcular_volumen_esfera(radio):
+    #Calcula el volumen de una esfera dado su radio.
+
+    #param radio: Radio de la esfera
+    #return: Volumen de la esfera
+    
+    volumen = (4/3) * math.pi * (radio ** 3)  # Fórmula: (4/3) * π * r³
+    return volumen  # Retornar el volumen calculado
+
+# Función para calcular el volumen de un cilindro
+def calcular_volumen_cilindro(radio, altura):
+    
+    #Calcula el volumen de un cilindro utilizando el área de su base.
+
+    #param radio: Radio de la base del cilindro
+    #param altura: Altura del cilindro
+    #return: Volumen del cilindro
+    
+    area_base = calcular_area_circulo(radio)  # Calcular el área de la base del cilindro
+    volumen = area_base * altura  # Fórmula: área de la base * altura
+    return volumen  # Retornar el volumen calculado
+
+# Solicitar el radio al usuario
+radio = float(input("Introduce el radio: "))  # Conversión del input a float
+
+# Calcular y mostrar el área del círculo
+area = calcular_area_circulo(radio)  # Llamar a la función para calcular el área
+print(f"El área del círculo es: {area:.2f}")  # Imprimir el área formateada a 2 decimales
+
+# Calcular y mostrar el volumen de la esfera
+volumen_esfera = calcular_volumen_esfera(radio)  # Llamar a la función para calcular el volumen
+print(f"El volumen de la esfera es: {volumen_esfera:.2f}")  # Imprimir el volumen formateado
+
+# Solicitar la altura del cilindro al usuario
+altura = float(input("Introduce la altura del cilindro: "))  # Conversión del input a float
+
+# Calcular y mostrar el volumen del cilindro
+volumen_cilindro = calcular_volumen_cilindro(radio, altura)  # Llamar a la función para calcular el volumen
+print(f"El volumen del cilindro es: {volumen_cilindro:.2f}")  # Imprimir el volumen formateado
+
