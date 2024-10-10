@@ -1,0 +1,33 @@
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Definir una función (), que tome tres números como argumentos")
+print("y devuelva el mayor de ellos.")
+print(" ")
+
+
+def mayor_de_tres(a, b, c):
+    # Creamos una lista con los tres números
+    numeros = [a, b, c]
+    print(input("Ingresa un numero"))
+    print(input("Ingresa un segundo numero"))
+    print(input("Ingresa un tercer numero"))
+    
+    # Inicializamos una variable para almacenar el mayor
+    mayor = numeros[0]
+    
+    # Recorremos la lista de números
+    for num in numeros:
+        # Si encontramos un número mayor, lo actualizamos
+        if num > mayor:
+            mayor = num
+    
+    # Devolvemos el mayor de los tres números
+    return mayor
+print(" ")
+# Ejemplo de uso
+resultado = mayor_de_tres(10, 25, 15)
+# Muestra el mayor de los tres números
+print("El numero mayor es")
+print(resultado) 
