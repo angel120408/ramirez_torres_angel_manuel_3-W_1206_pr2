@@ -1,0 +1,22 @@
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Dar un entero positivo y resuelva su factorial.")
+print(" ")
+
+
+import math  # Importa la biblioteca math, que contiene funciones matemáticas
+
+# Solicita un entero positivo al usuario
+numero = int(input("Introduce un entero positivo: "))
+
+# Verifica si el número es negativo
+if numero < 0:
+    print("Por favor, introduce un número entero positivo.")
+else:
+    # Calcula el factorial usando la función factorial de la biblioteca math
+    resultado = math.factorial(numero)
+    
+    # Imprime el resultado
+    print(f"El factorial de {numero} es {resultado}.")
