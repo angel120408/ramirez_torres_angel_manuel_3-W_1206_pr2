@@ -1,0 +1,33 @@
+print(" ")
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Calcular total de una factura luego del IVA.")
+print("primero obtener la cantidad sin IVA  ")
+print("luego el porcentaje de IVA a aplicar, ")
+print("por ultimo devolver el total de la factura.")
+print("Si se da la función sin pasarle un porcentaje de IVA, deberá aplicar un 21%.")
+print(" ")
+
+# Solicitar la cantidad sin IVA al usuario
+cantidad_sin_iva = float(input("Introduce la cantidad sin IVA: "))
+
+# Solicitar el porcentaje de IVA al usuario, si lo desea
+porcentaje_input = input("Introduce el porcentaje de IVA (deja vacío para aplicar 21%): ")
+
+# Verificar si se ingresó un porcentaje de IVA
+if porcentaje_input:
+    # Convertir el input a float si se proporciona un porcentaje
+    porcentaje_iva = float(porcentaje_input)
+else:
+    # Si no se proporciona, usar el valor por defecto de 21%
+    porcentaje_iva = 21  
+
+# Calcular el IVA multiplicando el porcentaje por la cantidad sin IVA
+iva = (porcentaje_iva / 100) * cantidad_sin_iva
+
+# Calcular el total de la factura sumando la cantidad sin IVA y el IVA
+total_factura = cantidad_sin_iva + iva
+
+# Mostrar el resultado final al usuario
+print(f"El total de la factura, incluyendo IVA, es: {total_factura:.2f}")
