@@ -1,0 +1,23 @@
+print("Ramirez Torres Angel Manuel 3°W")
+print("Numer de control: 1206")
+print("-INSTRUCCIONES-")
+print("Dar un string <nombre> y despliegue un saludo ¡hola <nombre>!.")
+print(" ")
+
+
+def obtener_nombre():
+    # Solicita al usuario que ingrese su nombre
+    return input("Ingresa tu nombre: ")
+
+def mostrar_saludo(nombre):
+    # Muestra un saludo personalizado usando el nombre proporcionado
+    print(f"¡Hola {nombre}!")
+
+def main():
+    # Función principal que coordina el flujo del programa
+    nombre_usuario = obtener_nombre()  # Llama a la función para obtener el nombre
+    mostrar_saludo(nombre_usuario)      # Llama a la función para mostrar el saludo
+
+# Ejecutar la función principal si el script se está ejecutando directamente
+if __name__ == "__main__":
+    main()
